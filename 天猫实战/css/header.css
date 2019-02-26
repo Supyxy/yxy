@@ -1,0 +1,264 @@
+@charset"utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+#header{
+	min-width: 1230px;/*当浏览器宽度小于1000时出现滚动条，宽度不再变化*/
+	height: 180px;
+	background-color: pink;
+	font-size: 12px;
+	font-family: tahoma, arial, "宋体";
+}
+#header .header-nav{
+	position: relative;/*解决遮挡搜索栏问题*/
+	z-index: 1;/*解决遮挡搜索栏问题*/
+	height: 26px;
+	border-bottom: 2px solid #e5e5e5;
+	background-color: #f2f2f2;
+}
+#header .header-nav .nav-content{
+	width: 1000px;
+	background-color: white;
+	margin:auto;
+}
+#header .header-nav .nav-content .nav-left {
+	float: left;
+	width: 325px;
+	color: #999;
+}
+#header .header-nav .nav-content .nav-left i{
+	font-size: 12px;
+	color:#FF0036;
+}
+#header .header-nav .nav-content .nav-left span{
+	display: inline-block;
+	margin-right: 18px;
+}
+#header .header-nav .nav-content .nav-left a{
+	width: 63px;
+	line-height:26px; 
+	text-decoration: none;
+	color: #999;
+	margin-right: 18px;
+}
+#header .header-nav .nav-left a:hover{
+	color: #FF0036;
+	text-decoration: underline;
+}
+#header .header-nav .nav-right{
+	float: right;
+	width:380px;
+	height: 26px;
+	line-height: 26px;
+	color: #999;
+}
+#header .header-nav .nav-right a{
+	text-decoration: none;
+	color: inherit;
+}
+#header .header-nav .nav-right a:hover{
+	text-decoration: underline;
+	color: #ff0036;
+}
+#header .header-nav .mytaobao{
+	float: left;
+	width: 75px;
+	height: 26px;
+}
+#header .header-nav .mytaobao>a{
+	display: block;
+	position: relative;
+	height: 100%;
+	line-height: 26px;
+	text-indent: 10px;
+}
+#header .header-nav .mytaobao a:hover{
+	color: #FF0036;
+	text-decoration: underline;
+	background-color: #fff;
+}
+#header .header-nav .triangle>a:after{
+	content:"";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 5px;
+	margin:auto;
+	width: 0;
+	height: 0;
+	border-width: 3px;
+	border-style: solid;
+	border-color: #bbb transparent;
+	border-bottom: none;
+	transition:.3s;
+}
+#header .header-nav .triangle>a:hover:after{
+	transform: rotate(180deg);	
+}
+#header .header-nav .mytaobao ul{
+	display: none;
+	width: 74px;
+	height: 36px;
+	padding: 10px;
+	background-color: #fff;
+	list-style: none;
+	line-height: 20px;
+}
+#header .header-nav .mytaobao:hover ul{
+	display: block;
+}
+#header .header-nav .shopping-cart{
+	float: left;
+	width: 80px;
+	height: 26px;
+	vertical-align: middle;
+}
+#header .header-nav .shopping-cart i{
+	color: #FF0036;
+}
+#header .header-nav .shopping-cart span{
+	color: #666;
+	font-weight: 600;
+}
+#header .header-nav .shopping-cart:hover span{
+	color: #FF0036;
+}
+#header .header-nav .favourite{
+	position: relative;
+	float: left;
+	width: 72px;
+	height: 100%;
+	text-align: center;
+}
+#header .header-nav .favourite:hover{
+	background-color: #fff;
+}
+#header .header-nav .favourite ul{
+	display: none;
+	width: 74px;
+	height: 36px;
+	padding: 10px;
+	background-color: white;
+	list-style: none;
+	line-height: 20px;
+}
+#header .header-nav .favourite:hover ul{
+	display: block;
+}
+#header .header-nav .taobao{
+	float: left;
+	width: 72px;
+	height: 100%;
+/*	border-left: 1px solid black;*/
+	text-align: center;
+}
+#header .header-nav .business-support{
+	position: relative;
+	float: left;
+	width: 80px;
+	height: 100%;
+	text-align: center;
+}
+#header .header-nav .business-support:hover{
+	background-color: #fff;
+}
+#header .header-nav .business-support .hide{
+	display: none;
+	position: absolute;
+	right: 0;
+	width: 125px;
+	height: 180px;
+	padding: 0 10px;
+	background-color: white;
+}
+#header .header-nav .business-support:hover .hide{
+	display: block;
+}
+#header .header-nav .business-support .hide h4{
+	text-indent: -84px;
+}
+#header .header-nav .business-support .hide ul{
+	width: 125px;
+	border-bottom: 1px dotted #827777;
+}
+#header .header-nav .business-support .hide ul li{
+	display: inline-block;
+}
+#header .header-nav .business-support .hide>ul>li:nth-child(odd){
+	margin-right: 22px;
+}
+/*header nav end*/
+/*header container start*/
+#header .header-content{
+	width: 100%;
+	height: 160px;
+}
+#header .header-content .header-container{
+	position: relative;
+	width: 1230px;
+	height: 100px;
+	margin:auto;
+	padding-top: 30px;
+	/*background-color: skyblue;*/
+}
+#header .header-content .header-container h1{
+	float: left;
+	width: 190px;
+	height: 28px;
+	margin-left: 11px;
+	background-image: url("../images/tianmaologo.png");
+	background-repeat: no-repeat;
+}
+#header .header-content .header-container .header-search{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin:auto;
+	left: 427px;
+	float: left;
+	width: 542px;
+	height: 70px;
+/*	background-color: #fff;*/
+}
+#header .header-content .header-container .header-search form input[type=text]{
+	float: left;
+	width: 450px;
+	height: 36px;
+	text-indent: 5px;
+	border:3px solid #ff0036;
+}
+#header .header-content .header-container .header-search form input[type=submit]{
+	float: left;
+	width: 92px;
+	height: 36px;
+	background-color: #ff0036;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 5px;
+	border: none;
+}
+#header .header-content .header-container .header-search ul{
+	list-style: none;
+}
+#header .header-content .header-container .header-search ul li{
+	display: inline-block;
+	line-height: 30px;
+}
+#header .header-content .header-container .header-search ul li a{
+	padding: 0 8px;
+	text-decoration: none;
+	border-right: 1px solid #ccc;
+	font-size: 14px;
+	color: #999;
+}
+#header .header-content .header-container .header-search ul li:last-child a{
+	border-right: none;
+}
+#header .header-content .header-container .header-search ul li:first-child a{
+	padding-left: 0;
+}
+#header .header-content .header-container .header-search ul .color a{
+	color: #ff0036;
+}
